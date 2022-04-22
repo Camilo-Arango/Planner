@@ -69,3 +69,11 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.container .row div{
+  border: 1px solid black;
+}
+
+.container .row > div:nth-child(1) {
+  border-left: none;
+}
