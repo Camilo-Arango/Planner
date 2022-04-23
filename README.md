@@ -9,7 +9,9 @@ The HTML was essentially done but we needed to add the text boxes for each time 
 
 For the Javascript, I first added the dynamic clock by using jQuery to reference the Moment API. I then used jQuery to write a function that references the assigned id for each of the rows with the current hour using Moment's API and then I used if-else statements to format the rows based on whether or not the referenced time value is before during or after the current hour to assign appropriate classes from the css to the corresponding situation.
 
-I then used javascript to add an event listener to store the information from the planner with a click event.
+I then used javascript to add an event listener to store the information from the planner with a click event to the user's local storage.
+
+Lastly, I added a function that would load the local storage upon reloading the website.
 
 # Project Links
 
