@@ -1,7 +1,7 @@
 # Daily Planner
 # Picture of Project
 
-![alt text]()
+![alt text](https://github.com/Camilo-Arango/Planner/blob/main/Assets/Website%20Picture.PNG)
 
 # Project Description
 
