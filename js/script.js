@@ -8,30 +8,23 @@ setInterval(update, 1000);
 $("#placeholder > .row > .timelabel").each(function() {
     var currentTime = moment().hour();
     if (currentTime > (this.id)){
-        //assign new class (append)
-        console.log(currentTime);
         $(this).siblings("textarea").addClass("past");
     } else if (currentTime < (this.id)){
-        //assign new class (append)
-        console.log(currentTime);
         $(this).siblings("textarea").addClass("future");
     } else {
-        //assign new class (append)
-        console.log(currentTime);
         $(this).siblings("textarea").addClass("present");
     }
 });
 
-//save button for saving to local storage
-var toDoList = [];
-document.addEventListener("click", function() {
-    localStorage.setItem("toDoList");
+//load local storage 
+$(".textarea").each(function() {
+    var inputID = $(this).attr("id");
+    var inputEl = localStorage.getItem(inputID);
+    $(this).val(inputEl);
 });
-// $(document).ready(function(){
-//     $(".toDo").on("click", function(){
-//         localStorage.setItem("myContent");
-//         console.log(localStorage.getItem("myContent"));
-//     });
-// });
-
-//load items from local storage
+//save button for saving to local storage
+$(".saveBtn").on("click", function () {
+    inputID = $(this).attr("id");
+    inputEl = $(this).parent().children()[1].value;
+    localStorage.setItem(inputID, inputEl);
+});
